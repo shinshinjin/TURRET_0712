@@ -5,8 +5,8 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject BulletPrefab;
-    public float spawnRateMin = 1f;
-    public float spawnRateMax = 2f;
+    public float spawnRateMin = 0.1f;
+    public float spawnRateMax = 5f;
 
     private Transform target;
     private float spawnRate;
@@ -36,7 +36,7 @@ public class BulletSpawner : MonoBehaviour
         transform.Rotate(0, 1, 0);
     }
 
-    private void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         isPlayer = true;
     }
